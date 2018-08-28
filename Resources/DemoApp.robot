@@ -18,6 +18,3 @@ Do Sign In
 Go to Home Page
     ResearchUserOnlyPage.Click Continue
     HomePage.Verify Page Loaded
-
-Validate "Team" Page
-    Team.Validate Page Contents
