@@ -3,7 +3,8 @@ Problem statement : need a web application automation solution that runs on majo
 ,and can be easily integrated with test management systems like JIRA. 
 
 Site automated: http://slidehosting.com/
-Requirements: 
+
+Requirements to run \Tests\Demo.robot files are : 
 1) you need to install python 2.7 version and pip
 2) pip install robotframework
 3) pip install selenium
