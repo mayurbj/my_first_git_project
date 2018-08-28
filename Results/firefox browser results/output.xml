@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180828 14:20:06.014" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\development\robot-scripts\my_first_git_project\tests\Demo.robot" id="s1" name="Demo">
+<test id="s1-t1" name="Should be able to access &quot;Home&quot; page">
+<kw type="setup" name="Begin Web Test" library="CommonWeb">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180828 14:20:06.265" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20180828 14:20:16.018" starttime="20180828 14:20:06.264"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:16.019" starttime="20180828 14:20:06.264"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The test was run using ${BROWSER} browser</arg>
+</arguments>
+<msg timestamp="20180828 14:20:16.026" level="INFO">The test was run using firefox browser</msg>
+<status status="PASS" endtime="20180828 14:20:16.026" starttime="20180828 14:20:16.026"></status>
+</kw>
+<kw name="Go to Landing Page" library="DemoApp">
+<kw name="Navigate To" library="LandingPage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20180828 14:20:16.030" level="INFO">Opening url 'http://slidehosting.com/Login.php'</msg>
+<status status="PASS" endtime="20180828 14:20:24.302" starttime="20180828 14:20:16.029"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:24.302" starttime="20180828 14:20:16.028"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LANDING_NAVIGATION_ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180828 14:20:24.321" starttime="20180828 14:20:24.303"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:24.321" starttime="20180828 14:20:24.303"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:24.322" starttime="20180828 14:20:16.028"></status>
+</kw>
+<kw name="Do Sign In" library="DemoApp">
+<kw name="Sign In" library="LandingPage">
+<kw name="Enter Credentials" library="LandingPage">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LANDING_USERNAME_TEXTBOX}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20180828 14:20:24.325" level="INFO">Typing text 'test' into text field 'css=input[name='user']'</msg>
+<status status="PASS" endtime="20180828 14:20:24.415" starttime="20180828 14:20:24.325"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LANDING_PASSWORD_TEXTBOX}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20180828 14:20:24.417" level="INFO">Typing password into text field 'css=input[name='password']'</msg>
+<status status="PASS" endtime="20180828 14:20:24.476" starttime="20180828 14:20:24.416"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:24.476" starttime="20180828 14:20:24.324"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${LANDING_GUEST_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180828 14:20:24.477" level="INFO">Clicking button 'css=input[value='Guest Login']'.</msg>
+<status status="PASS" endtime="20180828 14:20:25.720" starttime="20180828 14:20:24.477"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:25.720" starttime="20180828 14:20:24.323"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ResearchUserOnlyPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${RUO_NAVIGATION_ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180828 14:20:25.747" starttime="20180828 14:20:25.721"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:25.747" starttime="20180828 14:20:25.720"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:25.747" starttime="20180828 14:20:24.322"></status>
+</kw>
+<kw name="Go to Home Page" library="DemoApp">
+<kw name="Click Continue" library="ResearchUserOnlyPage">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${RUO_CONTINUE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180828 14:20:25.749" level="INFO">Clicking button 'css=.btn'.</msg>
+<status status="PASS" endtime="20180828 14:20:27.944" starttime="20180828 14:20:25.749"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:27.945" starttime="20180828 14:20:25.748"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${HOME_NAVIGATION_ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180828 14:20:27.963" starttime="20180828 14:20:27.945"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:27.963" starttime="20180828 14:20:27.945"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:27.963" starttime="20180828 14:20:25.747"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="CommonWeb">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180828 14:20:28.763" starttime="20180828 14:20:27.964"></status>
+</kw>
+<status status="PASS" endtime="20180828 14:20:28.763" starttime="20180828 14:20:27.963"></status>
+</kw>
+<doc>This is test 1</doc>
+<tags>
+<tag>test1</tag>
+</tags>
+<status status="PASS" endtime="20180828 14:20:28.764" critical="yes" starttime="20180828 14:20:06.262"></status>
+</test>
+<doc>Works with different browsers, No Custom Code, Easily Maintainable as using Page Objects,
+Generates output.xml which can be intergrated with test management tool like JIRA, Generate Snapshots
+on failures..</doc>
+<status status="PASS" endtime="20180828 14:20:28.766" starttime="20180828 14:20:06.021"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">test1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo" pass="1">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
