@@ -9,7 +9,7 @@ Library  Selenium2Library   # declaring the library
 The user must sign in to checkout    #name of the test case
     [Documentation]  User must see sign in page after clicking Proceed to Checkout
     [Tags]  Smoke     #helps in selecting what tests to run
-    [Setup]  Open Browser  http://www.amazon.com  firefox   #got it from keywords documentation of Selenium2 library. You can change the browser you want here
+    [Setup]  Open Browser  http://www.amazon.com  chrome   #got it from keywords documentation of Selenium2 library. You can change the browser you want here
     Wait Until Page Contains  Your Amazon.com      #checking if the page loaded successfully
     Input Text  id=twotabsearchtextbox  Ferrari 458                                               # writing the pre-conditions
     Click Button  xpath=//div[@class="nav-search-submit nav-sprite"]/input[@class='nav-input']
