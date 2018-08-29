@@ -1,6 +1,5 @@
 # my_first_git_project
-Problem statement : need a web application automation solution that runs on major browsers, which is easily maintainable, less custom code, and the test results
-,and can be easily integrated with test management systems like JIRA. 
+Problem statement : need a web application automation solution that runs on major browsers, which is easily maintainable, less custom code, and the test results that can be easily integrated with test management systems like JIRA. 
 
 Site automated: http://slidehosting.com/
 
